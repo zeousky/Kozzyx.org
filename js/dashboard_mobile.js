@@ -60,13 +60,14 @@
   async function handleCallback() {
     const params = new URLSearchParams(location.search);
     const code = params.get('code');
+    const state = params.get('state');
     if (!code) return false;
     history.replaceState({}, document.title, location.pathname);
     try {
       const r = await fetch(API_BASE + '/api/auth/callback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code }),
+        body: JSON.stringify({ code, state }),
       }).then(r => r.json());
       if (r && r.token && r.user) {
         token = r.token; me = r.user;

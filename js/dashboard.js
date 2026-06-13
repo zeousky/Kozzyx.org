@@ -1033,6 +1033,7 @@ if (typeof trustedTypes !== 'undefined' && trustedTypes.createPolicy) {
   async function checkAuth() {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
+    const state = params.get('state');
     if (code) {
       window.history.replaceState({}, document.title, window.location.pathname);
       toast('Signing in with Discord…', 'i-sparkles');
@@ -1040,7 +1041,7 @@ if (typeof trustedTypes !== 'undefined' && trustedTypes.createPolicy) {
         const res = await fetch(`${API_BASE}/api/auth/callback`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code })
+          body: JSON.stringify({ code, state })
         }).then(r => r.json());
         if (res && res.token && res.user) {
           authToken = res.token;
