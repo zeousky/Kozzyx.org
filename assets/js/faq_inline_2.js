@@ -1831,6 +1831,7 @@ function App() {
   }, [accent]);
   React.useEffect(() => {
     window.addEventListener('message', e => {
+      if (e.origin !== window.location.origin) return;
       if (e.data?.type === '__activate_edit_mode') setEditMode(true);
       if (e.data?.type === '__deactivate_edit_mode') setEditMode(false);
     });

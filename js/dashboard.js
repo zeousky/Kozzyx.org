@@ -430,6 +430,7 @@ if (typeof trustedTypes !== 'undefined' && trustedTypes.createPolicy) {
   $$('[data-go]').forEach(b => b.addEventListener('click', () => go(b.dataset.go)));
 
   function initView(view) {
+    if (!/^[a-z][a-z0-9-]*$/i.test(view)) { return; }
     if (built[view]) { return; }
     built[view] = true;
     const root = $(`.view[data-view="${view}"]`);
@@ -875,8 +876,10 @@ if (typeof trustedTypes !== 'undefined' && trustedTypes.createPolicy) {
   function toast(msg, icon) {
     const t = document.createElement('div');
     t.className = 'toast';
-    t.innerHTML = `<span class="toast-ic"><svg class="ic"><use href="#${icon || 'i-check'}"/></svg></span>` +
-      `<span>${msg}</span><span class="toast-bar"></span>`;
+    const safeIcon = String(icon || 'i-check').replace(/[^a-z0-9_-]/gi, '');
+    t.innerHTML = `<span class="toast-ic"><svg class="ic"><use href="#${safeIcon}"/></svg></span>` +
+      `<span class="toast-msg"></span><span class="toast-bar"></span>`;
+    t.querySelector('.toast-msg').textContent = msg;
     toastWrap.appendChild(t);
     const bar = $('.toast-bar', t);
     if (bar && bar.animate && !REDUCED) {
