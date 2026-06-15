@@ -1,5 +1,12 @@
 # kozzyx.org
 
+[![License](https://img.shields.io/github/license/Officialckazros/Kozzyx.org?style=flat-square&color=blue)](LICENSE)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![CSP](https://img.shields.io/badge/CSP-strict-success?style=flat-square)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fkozzyx.org&style=flat-square&up_message=online&down_message=offline)](https://kozzyx.org)
+
 The website for **KozzyX** — an all-in-one Discord bot: moderation, AI, tickets, polls, giveaways, and one-command server setup. Free.
 
 🔗 Live at **[kozzyx.org](https://kozzyx.org)**
