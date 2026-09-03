@@ -30,4 +30,4 @@ So, after editing any inline script:
 - If you changed a desktop page, check whether its `_mobile` variant needs the same fix.
 - Test on a local server before pushing.
 
-That's it. Thanks again!
+That's it. Thanks again! 💜

@@ -1,9 +1,0 @@
-.git
-.github
-.DS_Store
-node_modules
-.env
-*.pem
-*.key
-CLAUDE.md
-.claude
