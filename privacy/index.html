@@ -75,17 +75,16 @@ KozzyX
 <li><strong>server configuration</strong><span>Welcome/goodbye text, embed colors, ticket and case channels, verification, self-role menus, plugins, automations, custom commands, autoresponders, and similar guild settings.</span></li>
 <li><strong>community features</strong><span>Giveaway entries, poll data Discord already has, reminders, birthdays, AFK notes, booster-role links, invite-join tracking, and dynamic voice-channel records.</span></li>
 <li><strong>tickets</strong><span>Open-ticket metadata. There are no saved transcripts. Three tickets per hour, per the bot’s own cap.</span></li>
-<li><strong>AI prompts</strong><span>When someone runs an AI command, the prompt (and a short in-memory thread) is sent to the configured provider. That thread is keyed by user + server, lives in RAM, and expires after 30 minutes.</span></li>
 <li><strong>dashboard login</strong><span>If you self-host the control center, Discord OAuth is used to see who you are and which servers you can manage. This public website does not run that login.</span></li>
 <li><strong>mail you send us</strong><span>If you email or DM the operator, that message is just a message. We keep what we need to answer it.</span></li>
 </ul>
-<p class="note">It does not scrape every channel it can see. Ordinary chat is not stored unless a feature you enabled needs that message (autoresponder, automations, mention-based AI, and similar).</p>
+<p class="note">It does not scrape every channel it can see. Ordinary chat is not stored unless a feature you enabled needs that message (autoresponder, automations, and similar).</p>
 </section>
 
 <section class="section" id="why">
 <h2>why it keeps any of this</h2>
 <div class="body">
-<p>To apply the next moderation action. To remember the case. To keep the ticket panel and the verification button working after a restart. To run a giveaway you started. To answer <code>/ask</code> with a little context.</p>
+<p>To apply the next moderation action. To remember the case. To keep the ticket panel and the verification button working after a restart. To run a giveaway you started.</p>
 <p>We do not sell this. We do not run ads against it. We do not build a marketing list out of your cases.</p>
 </div>
 </section>
@@ -94,7 +93,6 @@ KozzyX
 <h2>how storage works</h2>
 <div class="body">
 <p>Guild data lives in a local SQLite file on the host (<code>data/database.sqlite</code>). It is keyed by server. Two servers do not share cases.</p>
-<p>AI conversation memory is a separate in-process map. It is not written to SQLite. A restart clears it. <code>/clear_memory</code> clears yours in that server.</p>
 <p>Please don’t send passwords, tokens, private keys, or anything you would not want in a mod log. If you already did, have the server owner run <code>/data_deletion_request</code>, or write us.</p>
 </div>
 </section>
@@ -103,17 +101,16 @@ KozzyX
 <h2>who else sees it</h2>
 <div class="body">
 <p>Discord already has the message, the member list, and the audit log. That is their platform, their rules.</p>
-<p>AI commands send the current prompt and, when a thread exists, the recent in-memory turns to the configured model provider (for example Google, xAI, or DeepSeek, depending on which keys the host set). Image generation sends the prompt to the image provider. Provider-side storage is not something we control once the request leaves the host.</p>
 <p>Email alerts about the bot going down go through the SMTP settings on the host, to the operator. They are about the process, not your tickets.</p>
 </div>
-<p class="note">We are not Discord, and we are not those vendors. Their policies apply to what passes through them.</p>
+<p class="note">We are not Discord. Their policies apply to what passes through them.</p>
 </section>
 
 <section class="section" id="keep">
 <h2>how long it stays</h2>
 <div class="body">
 <p>Guild records stay until a command changes them, the server owner wipes the guild with <code>/data_deletion_request</code>, the bot leaves and we delete leftover data later, or the host file is removed.</p>
-<p>Temporary bans expire when their timer says so. AI memory expires after 30 minutes, or sooner if the process restarts.</p>
+<p>Temporary bans expire when their timer says so.</p>
 <p>Backups of the host can hold a copy of the SQLite file for as long as those backups exist. Treat that file like a mod log, because it is.</p>
 </div>
 </section>
@@ -123,7 +120,7 @@ KozzyX
 <div class="body">
 <p>If you don’t want a record, don’t use the bot. Kicking it stops new collection in that server. It does not, by itself, wipe what is already stored.</p>
 <p>Server owners can run <code>/data_request</code> to see counts, and <code>/data_deletion_request</code> to delete that server’s stored rows. That does not erase Discord’s own messages, other servers, or the operator’s email inbox.</p>
-<p>Anyone can run <code>/clear_memory</code> for their short AI thread. If that is not enough, email <a href="mailto:ckazros@kozzyx.org">ckazros@kozzyx.org</a> with the Discord user id and server id.</p>
+<p>If that is not enough, email <a href="mailto:ckazros@kozzyx.org">ckazros@kozzyx.org</a> with the Discord user id and server id.</p>
 </div>
 </section>
 
@@ -146,7 +143,7 @@ KozzyX
 <h2>the official bot vs running it yourself</h2>
 <div class="body">
 <p>Self-hosting means your SQLite file, your keys, your users, and your own privacy policy. The official bot is the one invited from this site.</p>
-<p>We can change models, limits, and where the file lives. If that changes what we collect in a way that matters, this page will say so.</p>
+<p>We can change limits and where the file lives. If that changes what we collect in a way that matters, this page will say so.</p>
 </div>
 </section>
 
