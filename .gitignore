@@ -1,20 +1,11 @@
-*
-
-# Dependencies
-node_modules/
-
-# OS / editor cruft
 .DS_Store
 Thumbs.db
 *.swp
-
-# Local env / secrets
+.idea/
+.vscode/
+*.iso
 .env
 *.pem
 *.key
-
-# AI assistant config — kept local
 CLAUDE.md
 .claude/
-
-*.iso

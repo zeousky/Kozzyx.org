@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="KozzyX is an archived Discord bot for running a server: moderation, tickets, anti-raid, and a few AI commands.">
+<meta name="theme-color" content="#1e1f22">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="canonical" href="https://kozzyx.org/">
+<meta property="og:url" content="https://kozzyx.org/">
+<meta property="og:image" content="https://kozzyx.org/image.png">
+<meta property="og:title" content="KozzyX">
+<meta property="og:description" content="an archived Discord bot for actually running a server">
+<title>KozzyX · an archived Discord server bot</title>
+<link rel="icon" href="/assets/pfp-96.png?v=20260920a" type="image/png">
+<link rel="stylesheet" href="/assets/kozzyx.css?v=20260920a">
+<script src="/assets/kozzyx.js?v=20260920a" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main">
+<a class="brand" href="/" aria-label="KozzyX home">
+<img src="/assets/pfp-96.png?v=20260920a" width="28" height="28" alt="">
+KozzyX
+</a>
+<div class="nav-links">
+<a href="#what">what it does</a>
+<a href="#commands">commands</a>
+<a href="#limits">limits</a>
+<a href="/privacy">privacy</a>
+<a class="cta" href="https://discord.com/oauth2/authorize?client_id=1544122867296510032&amp;permissions=1429104618742&amp;integration_type=0&amp;scope=bot%20applications.commands">invite it</a>
+</div>
+<details class="menu">
+<summary>menu</summary>
+<div class="menu-panel">
+<a href="#what">what it does</a>
+<a href="#commands">commands</a>
+<a href="#limits">limits</a>
+<a href="/privacy">privacy</a>
+<a href="https://discord.com/oauth2/authorize?client_id=1544122867296510032&amp;permissions=1429104618742&amp;integration_type=0&amp;scope=bot%20applications.commands">invite it</a>
+</div>
+</details>
+</nav>
+<aside class="corner-note">There isn’t a lot of website around this, on purpose. The bot is archived. It still runs. Hope this is still enough.</aside>
+<main id="main" class="wrap">
+<header class="hero">
+<div class="hero-id">
+<img src="/assets/pfp-96.png?v=20260920a" width="52" height="52" alt="">
+<div>
+<strong>KozzyX <span class="chip">archived</span></strong>
+<span>the server-management discord bot</span>
+</div>
+</div>
+<h1>the bot that used to run the server</h1>
+<p class="lede">Moderation, tickets, anti-raid, giveaways, and a pile of slash commands in one place. It is archived, not abandoned: the official app still starts, and you can still invite it or run a copy yourself.</p>
+<div class="actions">
+<a class="button" href="https://discord.gg/fPG29xv7EA">come sit in the Discord</a>
+<a class="button ghost" href="https://discord.com/oauth2/authorize?client_id=1544122867296510032&amp;permissions=1429104618742&amp;integration_type=0&amp;scope=bot%20applications.commands">invite KozzyX</a>
+</div>
+<p class="note">Slash commands start with <code>/</code>. Older prefix commands use <code>,</code> for most things and <code>!</code> for config. <code>/help</code> lists both.</p>
+</header>
+
+<section class="chat" aria-label="KozzyX in a server">
+<article class="msg you">
+<div class="av" aria-hidden="true">you</div>
+<div>
+<div class="who">you <time>today</time></div>
+<p><code>/ban user:@raid-account duration:7d reason:raid</code></p>
+</div>
+</article>
+<article class="msg bot">
+<img class="av" src="/assets/pfp-96.png?v=20260920a" width="40" height="40" alt="">
+<div>
+<div class="who">KozzyX <span class="app">APP</span> <span class="chip">archived</span></div>
+<p>Banned <span class="mention">@raid-account</span> for 7 days. Case opened, they can appeal if you turned that on, and they come back when the timer runs out.</p>
+</div>
+</article>
+</section>
+
+<section class="section" id="what">
+<h2>what it actually does</h2>
+<p>KozzyX is staff tooling, not a hangout companion. You invite it when you want bans, cases, tickets, and setup in one bot instead of five.</p>
+<ul class="list">
+<li><strong>it moderates</strong><span>Ban, tempban, softban, kick, timeout, warn with thresholds, purge, slowmode, lock, nick lock, and a persistent case log. Slash and prefix both exist for the important ones.</span></li>
+<li><strong>it watches the door</strong><span>Anti-raid, a verification panel with an optional account-age check, invite tracking, and a guided <code>/server_setup</code> wizard.</span></li>
+<li><strong>it handles the queue</strong><span>Button tickets (three per hour, no transcripts), giveaways, polls, self-roles, booster roles, autoresponders, reminders, birthdays, and AFK.</span></li>
+<li><strong>it can think a little</strong><span><code>/ask</code>, <code>/summarize</code>, <code>/translate</code>, <code>/define</code>, <code>/imagine</code>, <code>/generate_rules</code>, <code>/roast</code>, and <code>/decide</code> when you have provider keys. Short-lived in-memory chat, not a full hangout brain.</span></li>
+<li><strong>it has a control center</strong><span>If you self-host, the bot serves a web dashboard for the same guild settings. This public site is just the brochure. Discord commands still work without it.</span></li>
+</ul>
+</section>
+
+<section class="section" id="commands">
+<h2>how you talk to it</h2>
+<p>Most commands need the matching Discord permission (ban, kick, manage server, and so on). Prefix defaults to a 3-second cooldown. <code>/help</code> is the full list; this is the short one.</p>
+<div class="commands">
+<div class="command"><code>/help</code><p>Everything it can do, by category.</p></div>
+<div class="command"><code>/ban</code> · <code>/kick</code> · <code>/timeout</code> · <code>/warn</code><p>The usual staff actions. <code>/ban</code> takes an optional duration. <code>/case view</code> and <code>/case user</code> inspect the record privately.</p></div>
+<div class="command"><code>/purge</code> · <code>/lock</code> · <code>/slowmode</code><p>Clean a channel, lock it, or slow it down. Unlock and untimeout exist too.</p></div>
+<div class="command"><code>/verification setup</code> · <code>/selfroles</code> · <code>/giveaway start</code> · <code>/poll</code><p>The community buttons: verify, pick a role, enter a giveaway, vote.</p></div>
+<div class="command"><code>/config</code> · <code>/plugins</code> · <code>/server_setup</code><p>Per-server settings, optional plugins, and a guided first-run. Prefix config uses <code>!</code>.</p></div>
+<div class="command"><code>/ask</code> · <code>/imagine</code> · <code>/summarize</code><p>Optional AI. Needs keys on the host. <code>/clear_memory</code> drops your short in-memory thread.</p></div>
+<div class="command"><code>/data_request</code> · <code>/data_deletion_request</code><p>Server owner only. See what this guild stored, or wipe it.</p></div>
+</div>
+</section>
+
+<section class="section" id="limits">
+<h2>the limits, said plainly</h2>
+<p>This is an archived bot on a small host. It is not a promise of uptime, new features, or free AI.</p>
+<ul class="list">
+<li><strong>archived means frozen</strong><span>Expect fixes if it is on fire. Do not expect a product roadmap, new slash commands, or a redesign of the dashboard.</span></li>
+<li><strong>tickets stay small</strong><span>Three tickets an hour. No saved transcripts. Close them when you are done.</span></li>
+<li><strong>AI is optional and short</strong><span>Conversation memory lives in RAM for 30 minutes per user in a server, then it is gone. If the host has no provider keys, those commands simply fail.</span></li>
+</ul>
+<p class="note">It can still ban the wrong person if a moderator tells it to. Check the case log. It is a tool, not a judge.</p>
+</section>
+
+<section class="section" id="data">
+<h2>what it keeps</h2>
+<div class="body">
+<p>Guild settings, cases, warnings, tickets, giveaways, autoresponders, custom commands, automations, birthdays, tempbans, self-roles, invite joins, and similar server records live in a local SQLite file on the host. AI chat is in memory and expires on its own.</p>
+<p>Server owners can run <code>/data_request</code> and <code>/data_deletion_request</code>. The longer version is the <a href="/privacy">privacy policy</a>. Inviting it also means the <a href="/terms">terms</a>.</p>
+</div>
+</section>
+
+<section class="section" id="faq">
+<h2>things people actually ask</h2>
+<div class="faq">
+<details>
+<summary>Is it dead?</summary>
+<p>Archived, not powered off. The official app is still invited as KozzyX. New work goes to other bots. This one is kept around because some servers still use it.</p>
+</details>
+<details>
+<summary>Why didn’t a slash command show up?</summary>
+<p>Give Discord a minute after invite. The bot needs the permission that command uses, and its role has to sit high enough to ban or manage roles. <code>/diagnose</code> checks a lot of that.</p>
+</details>
+<details>
+<summary>Do I need the website dashboard?</summary>
+<p>No. Commands work in Discord. The control center is for people who self-host and would rather click. This domain is the public site, not that app.</p>
+</details>
+<details>
+<summary>Can I trust the AI replies?</summary>
+<p>No. They can be sure and still wrong. Use them for drafts and jokes. Do not use them as law, medicine, or a raid plan.</p>
+</details>
+<details>
+<summary>Where do I say something is broken?</summary>
+<p>The <a href="https://discord.gg/fPG29xv7EA">Discord server</a>, or the person who made it: Discord <code>ckazros</code> · <a href="mailto:ckazros@kozzyx.org">ckazros@kozzyx.org</a>. Say what you tried. Please don’t paste tokens, case files, or private tickets into a public channel.</p>
+</details>
+</div>
+</section>
+
+<section class="section" id="setup">
+<h2>or run it yourself</h2>
+<p>KozzyX is a Node.js 22 app. You bring a Discord bot token, and any optional AI or mail keys. Prefix and slash commands load from the repo. The dashboard is served by the same process.</p>
+<div class="actions">
+<a class="button" href="https://github.com/zeousky/Kozzyx.org">look at this site’s source</a>
+<a class="button ghost contact-link" href="mailto:ckazros@kozzyx.org" data-contact-email="ckazros@kozzyx.org">write to the person who made it</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 2026 KozzyX</span>
+<nav aria-label="Footer">
+<a href="#what">what it does</a>
+<a href="#commands">commands</a>
+<a href="/privacy">privacy</a>
+<a href="/terms">terms</a>
+<a href="https://discord.gg/fPG29xv7EA">Discord</a>
+<a href="https://github.com/zeousky/Kozzyx.org">GitHub</a>
+<a href="mailto:ckazros@kozzyx.org">contact</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>

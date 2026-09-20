@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Privacy policy for the KozzyX Discord bot. What it stores, who sees it, and how to wipe it.">
+<meta name="theme-color" content="#1e1f22">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="canonical" href="https://kozzyx.org/privacy">
+<meta property="og:url" content="https://kozzyx.org/privacy">
+<meta property="og:image" content="https://kozzyx.org/image.png">
+<meta property="og:title" content="privacy · KozzyX">
+<meta property="og:description" content="what KozzyX remembers, who sees it, and how to wipe it">
+<title>privacy · KozzyX</title>
+<link rel="icon" href="/assets/pfp-96.png?v=20260920a" type="image/png">
+<link rel="stylesheet" href="/assets/kozzyx.css?v=20260920a">
+<script src="/assets/kozzyx.js?v=20260920a" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main">
+<a class="brand" href="/" aria-label="KozzyX home">
+<img src="/assets/pfp-96.png?v=20260920a" width="28" height="28" alt="">
+KozzyX
+</a>
+<div class="nav-links">
+<a href="/#what">what it does</a>
+<a href="/#commands">commands</a>
+<a href="/#limits">limits</a>
+<a href="/privacy">privacy</a>
+<a class="cta" href="https://discord.com/oauth2/authorize?client_id=1544122867296510032&amp;permissions=1429104618742&amp;integration_type=0&amp;scope=bot%20applications.commands">invite it</a>
+</div>
+<details class="menu">
+<summary>menu</summary>
+<div class="menu-panel">
+<a href="/#what">what it does</a>
+<a href="/#commands">commands</a>
+<a href="/#limits">limits</a>
+<a href="/privacy">privacy</a>
+<a href="https://discord.com/oauth2/authorize?client_id=1544122867296510032&amp;permissions=1429104618742&amp;integration_type=0&amp;scope=bot%20applications.commands">invite it</a>
+</div>
+</details>
+</nav>
+<main id="main" class="wrap">
+<header class="page-head">
+<p>privacy</p>
+<h1>what it remembers</h1>
+<p>Last updated September 20, 2026. KozzyX is a server-management bot. It stores configuration and moderation records so the next ban is not starting from zero. This page is the honest version of that.</p>
+</header>
+
+<section class="section" id="covers">
+<h2>what this is for</h2>
+<div class="body">
+<p>This is for the official KozzyX Discord bot — the app you invite from this site, client id 1544122867296510032, currently shown as KozzyX (archived). The website sits with the same person.</p>
+<p>Discord has its own privacy policy, and that still applies. If you run a copy of the code yourself, that copy is yours, and you are the one responsible for it. This page is only for the official bot.</p>
+<p>Using the bot also means you agree to the <a href="/terms">terms</a>.</p>
+</div>
+</section>
+
+<section class="section" id="who">
+<h2>who to write to</h2>
+<div class="body">
+<p>KozzyX is a privately run Discord app. Questions, deletion requests, and anything else about this page can go to <a href="mailto:ckazros@kozzyx.org">ckazros@kozzyx.org</a>, Discord <code>ckazros</code>, or the <a href="https://discord.gg/fPG29xv7EA">Discord server</a>.</p>
+<p>Include your Discord user id, and the server id if this is about a guild. Please don’t paste case files, tickets, or tokens into a public channel.</p>
+</div>
+</section>
+
+<section class="section" id="collect">
+<h2>what it collects</h2>
+<p>Only what it needs to run the features you turned on in that server.</p>
+<ul class="list">
+<li><strong>Discord ids</strong><span>User, role, channel, and server ids that a command, event, or setting already touched. Display names come along with the message Discord sent.</span></li>
+<li><strong>moderation records</strong><span>Warns, bans, tempbans, kicks, timeouts, cases, appeals, and related reasons when staff provide them. Audit-log plugin data if that plugin is on.</span></li>
+<li><strong>server configuration</strong><span>Welcome/goodbye text, embed colors, ticket and case channels, verification, self-role menus, plugins, automations, custom commands, autoresponders, and similar guild settings.</span></li>
+<li><strong>community features</strong><span>Giveaway entries, poll data Discord already has, reminders, birthdays, AFK notes, booster-role links, invite-join tracking, and dynamic voice-channel records.</span></li>
+<li><strong>tickets</strong><span>Open-ticket metadata. There are no saved transcripts. Three tickets per hour, per the bot’s own cap.</span></li>
+<li><strong>AI prompts</strong><span>When someone runs an AI command, the prompt (and a short in-memory thread) is sent to the configured provider. That thread is keyed by user + server, lives in RAM, and expires after 30 minutes.</span></li>
+<li><strong>dashboard login</strong><span>If you self-host the control center, Discord OAuth is used to see who you are and which servers you can manage. This public website does not run that login.</span></li>
+<li><strong>mail you send us</strong><span>If you email or DM the operator, that message is just a message. We keep what we need to answer it.</span></li>
+</ul>
+<p class="note">It does not scrape every channel it can see. Ordinary chat is not stored unless a feature you enabled needs that message (autoresponder, automations, mention-based AI, and similar).</p>
+</section>
+
+<section class="section" id="why">
+<h2>why it keeps any of this</h2>
+<div class="body">
+<p>To apply the next moderation action. To remember the case. To keep the ticket panel and the verification button working after a restart. To run a giveaway you started. To answer <code>/ask</code> with a little context.</p>
+<p>We do not sell this. We do not run ads against it. We do not build a marketing list out of your cases.</p>
+</div>
+</section>
+
+<section class="section" id="memory">
+<h2>how storage works</h2>
+<div class="body">
+<p>Guild data lives in a local SQLite file on the host (<code>data/database.sqlite</code>). It is keyed by server. Two servers do not share cases.</p>
+<p>AI conversation memory is a separate in-process map. It is not written to SQLite. A restart clears it. <code>/clear_memory</code> clears yours in that server.</p>
+<p>Please don’t send passwords, tokens, private keys, or anything you would not want in a mod log. If you already did, have the server owner run <code>/data_deletion_request</code>, or write us.</p>
+</div>
+</section>
+
+<section class="section" id="providers">
+<h2>who else sees it</h2>
+<div class="body">
+<p>Discord already has the message, the member list, and the audit log. That is their platform, their rules.</p>
+<p>AI commands send the current prompt and, when a thread exists, the recent in-memory turns to the configured model provider (for example Google, xAI, or DeepSeek, depending on which keys the host set). Image generation sends the prompt to the image provider. Provider-side storage is not something we control once the request leaves the host.</p>
+<p>Email alerts about the bot going down go through the SMTP settings on the host, to the operator. They are about the process, not your tickets.</p>
+</div>
+<p class="note">We are not Discord, and we are not those vendors. Their policies apply to what passes through them.</p>
+</section>
+
+<section class="section" id="keep">
+<h2>how long it stays</h2>
+<div class="body">
+<p>Guild records stay until a command changes them, the server owner wipes the guild with <code>/data_deletion_request</code>, the bot leaves and we delete leftover data later, or the host file is removed.</p>
+<p>Temporary bans expire when their timer says so. AI memory expires after 30 minutes, or sooner if the process restarts.</p>
+<p>Backups of the host can hold a copy of the SQLite file for as long as those backups exist. Treat that file like a mod log, because it is.</p>
+</div>
+</section>
+
+<section class="section" id="choices">
+<h2>your choices</h2>
+<div class="body">
+<p>If you don’t want a record, don’t use the bot. Kicking it stops new collection in that server. It does not, by itself, wipe what is already stored.</p>
+<p>Server owners can run <code>/data_request</code> to see counts, and <code>/data_deletion_request</code> to delete that server’s stored rows. That does not erase Discord’s own messages, other servers, or the operator’s email inbox.</p>
+<p>Anyone can run <code>/clear_memory</code> for their short AI thread. If that is not enough, email <a href="mailto:ckazros@kozzyx.org">ckazros@kozzyx.org</a> with the Discord user id and server id.</p>
+</div>
+</section>
+
+<section class="section" id="site">
+<h2>this website</h2>
+<div class="body">
+<p>The site is static pages on GitHub Pages. The menu JavaScript does not set cookies. There is no analytics tag on these pages.</p>
+<p>The host and the browser still do normal web things: a request log on their side, a cached file on yours. We do not use that to profile you. Contact is just email.</p>
+</div>
+</section>
+
+<section class="section" id="kids">
+<h2>age</h2>
+<div class="body">
+<p>You need a Discord account, and you need to be old enough for Discord. That means 13 or older. Please don’t use the bot if you are under 13.</p>
+</div>
+</section>
+
+<section class="section" id="hosting">
+<h2>the official bot vs running it yourself</h2>
+<div class="body">
+<p>Self-hosting means your SQLite file, your keys, your users, and your own privacy policy. The official bot is the one invited from this site.</p>
+<p>We can change models, limits, and where the file lives. If that changes what we collect in a way that matters, this page will say so.</p>
+</div>
+</section>
+
+<section class="section" id="changes">
+<h2>if this page changes</h2>
+<div class="body">
+<p>If this page changes, the new text applies once it is up. The date at the top is when that happened. Keeping the bot after that is agreement to the new policy.</p>
+<p>Questions go to <a href="mailto:ckazros@kozzyx.org">ckazros@kozzyx.org</a>, Discord <code>ckazros</code>, or the <a href="https://discord.gg/fPG29xv7EA">Discord server</a>.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 2026 KozzyX</span>
+<nav aria-label="Footer">
+<a href="/#what">what it does</a>
+<a href="/#commands">commands</a>
+<a href="/privacy">privacy</a>
+<a href="/terms">terms</a>
+<a href="https://discord.gg/fPG29xv7EA">discord</a>
+<a href="https://github.com/zeousky/Kozzyx.org">github</a>
+<a href="mailto:ckazros@kozzyx.org">contact</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>
