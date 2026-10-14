@@ -1,6 +1,12 @@
 /* Fullscreen autoplaying video page.
    The video is pinned to the viewport and cropped with object-fit: cover,
-   so it fills the screen on any aspect ratio without letterboxing. */
+   so it fills the screen on any aspect ratio without letterboxing.
+   object-position biases that crop towards the top of the frame, which
+   pushes the visible subject down the screen. The source clip is portrait
+   (576x768), so on a wide screen cover crops a lot vertically and the
+   default centre crop cut the head off. 20% brings the face into frame.
+   On a tall phone screen there is no vertical overflow to bias, so this
+   has no effect there and the full height is shown. */
 
 html,
 body {
@@ -20,6 +26,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   display: block;
   background: #000;
   border: 0;
